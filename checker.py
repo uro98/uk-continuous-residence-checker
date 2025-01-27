@@ -10,7 +10,7 @@ today = datetime.today().date()
 
 a_year_ago = today - relativedelta(years=1, days=1)
 window_start = min(min(days), a_year_ago)
-window_end = window_start + relativedelta(years=1)
+window_end = window_start + relativedelta(days=365)
 
 days_running_count = sum(1 for day in days if is_in_date_window(window_start, window_end, day))
 
